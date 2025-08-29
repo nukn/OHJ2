@@ -1,0 +1,11 @@
+
+YATZY suunnitelma:
+
+osat:
+# noppa: antaa random numeron 1-6
+# pelaajan/pelaajien tilasto tiedostoon
+# sovellus joka kysyy pelaajalta mitä tehdään seuraavaksi (esim. heitä, kirjaa pisteet, näytä ohje?)
+# pöytäkirja/pisteiden tarkastus
+
+
+
