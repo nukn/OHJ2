@@ -5,6 +5,7 @@ def vuoro():
         valitut = pidettavat_nopat(nopat)
         if len(valitut) == 5:
             break
-        uusitut = heita(5 - len(valitut))
-        nopat = valitut + uusitut
+        uudet = heita(5 - len(valitut))
+        nopat = valitut + uudet
+
     return nopat
