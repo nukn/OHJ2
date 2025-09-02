@@ -1,6 +1,8 @@
 
 ##### pisteiden tarkistus & kirjaus #####
 
+
+# pelaajatiedot vois ehkä tallentaa tiedostoon ?
 pelaaja = {
     "ykköset": None, "kakkoset": None, "kolmoset": None,
     "neloset": None, "vitoset": None, "kutoset": None,
