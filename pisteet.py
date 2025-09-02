@@ -39,6 +39,18 @@ def laske_pisteet(kohta, nopat):
         return nopat.count(6) * 6
     elif kohta == "sattuma":
         return sum(nopat)
+    
+    elif kohta == "pieni suora":
+        if sorted(nopat) == [1, 2, 3, 4, 5]:
+            return sum(nopat)
+    elif kohta == "iso suora":
+            if sorted(nopat) == [2, 3, 4, 5, 6]:
+                return sum(nopat)
+            
+    elif kohta == "yatzy":
+        if len(set(nopat)) == 1:
+            return sum(nopat)
+        
     return 0
 
 

@@ -17,7 +17,7 @@ def kirjaus(pelaaja):
             pisteet = laske_pisteet(kohta, nopat)
             pelaaja[kohta] = pisteet
             nayta_tulos(pelaaja)
-            print(f"Kirjattu pisteet kohtaan {kohta}.")
+            print(f"Kirjattu {pisteet} pistettä kohtaan {kohta}.")
     except:
         print('valitse väliltä 1-15')
         raise ValueError
