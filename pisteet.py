@@ -10,34 +10,16 @@ pelaaja = {
 }
 
 
-print(
-f"""
------pelaaja------
-1 ykköset: {pelaaja['ykköset']}
-2 kakkoset: {pelaaja['kakkoset']}
-3 kolmoset:
-4 neloset:
-5 vitoset:
-6 kutoset:
-
-7 pari:
-8 kaksi paria:
-9 kolme samaa:
-10 neljä samaa:
-11 pieni suora:
-12 iso suora:
-13 täyskäsi:
-14 sattuma:
-15 yatzy:
--------------
-""")
-
-
-
-nopat = [1,1,1,1,1] 
-
-print ('nopat:', nopat)
-komento = input('mihin kirjataan? ')
+def nayta_tulos(pelaaja:dict):
+    i = 1
+    yht = sum(v for v in pelaaja.values() if v is not None)
+    print()
+    print("---------pelaaja----------")
+    for i, (kohta, arvo) in enumerate(pelaaja.items(), start=1):
+        print (f"{i}: {kohta}: {arvo if arvo is not None else '-'}")
+    print(f"Yhteensä: {yht}")
+    print("---------------------------")
+    print()
 
 
 def laske_pisteet(kohta, nopat):
@@ -57,20 +39,8 @@ def laske_pisteet(kohta, nopat):
         return sum(nopat)
     return 0
 
-kohdat = list(pelaaja.keys())
-try:
-    komento = int(komento)
-    kohta = kohdat[komento - 1]
-    if pelaaja[kohta] is not None:
-        print ("kohta on jo täytetty!")
-    else:
-        pisteet = laske_pisteet(kohta, nopat)
-        pelaaja[kohta] = pisteet
-        print(f"kirjattu pisteet kohtaan {kohta}")
-except:
-    print('virheellinen syöte')
-    raise ValueError
-    
 
     
-#näytä päivitetty tulos
+
+
+
