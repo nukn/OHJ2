@@ -26,7 +26,9 @@ def pidettavat_nopat(nopat):
 def vuoro():
     nopat = heita(5)
     for heitto in range(2):
+        print(f"\nHeitto: {heitto}")
         nayta_nopat(nopat)
+        print("Valitse pidettävät nopat:")
         valitut = pidettavat_nopat(nopat)
         if len(valitut) == 5:
             break
