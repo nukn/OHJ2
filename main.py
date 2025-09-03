@@ -36,4 +36,4 @@ if __name__ == "__main__":
         pelaajan_vuoro()
         
     print("Taulukko täytetty! lopullinen tulos:")
-    print(nayta_tulos(pelaaja))
+    nayta_tulos(pelaaja)
