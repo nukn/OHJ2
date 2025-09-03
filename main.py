@@ -17,7 +17,7 @@ def kirjaus(pelaaja):
             pisteet = laske_pisteet(kohta, nopat)
             pelaaja[kohta] = pisteet
             nayta_tulos(pelaaja)
-            print(f"Kirjattu {pisteet} pistettä kohtaan {kohta}.")
+            print(f"Kirjattu {pisteet} pistettä kohtaan {kohta}.\n")
     except:
         print('valitse väliltä 1-15')
         raise ValueError
@@ -25,12 +25,15 @@ def kirjaus(pelaaja):
         
 def pelaajan_vuoro():
     print()
-    print(f"KIERROS {kierros}")
+    print(f"KIERROS {kierros} / {kierrokset}")
     kirjaus(pelaaja)
 
 
 if __name__ == "__main__":
     nayta_tulos(pelaaja)
-    #pelaa 3 kierrosta
-    for kierros in range(1, 4):
+    kierrokset = 15
+    for kierros in range(1, kierrokset + 1):
         pelaajan_vuoro()
+        
+    print("Taulukko täytetty! lopullinen tulos:")
+    print(nayta_tulos(pelaaja))

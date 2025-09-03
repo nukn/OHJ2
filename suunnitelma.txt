@@ -1,11 +1,15 @@
 
 YATZY suunnitelma:
 
-osat:
-# noppa: antaa random numeron 1-6
-# pelaajan/pelaajien tilasto tiedostoon
-# sovellus joka kysyy pelaajalta mitä tehdään seuraavaksi (esim. heitä, kirjaa pisteet, näytä ohje?)
-# pöytäkirja/pisteiden tarkastus
+aloitus: 1 syyskuuta 2025
+valmis: 
+
+osat & tehtävien jako:
+# noppa & vuorot OK
+# pisteiden tarkastus ja lisäys OK
+# main sovellus pelaamiseen
+# pelaajan tilasto tiedostoon
 
 
 
+Loppuraportti
