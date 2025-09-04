@@ -1,6 +1,15 @@
 from heitot import vuoro
 from pisteet import pelaaja, laske_pisteet, nayta_tulos
 
+
+# tallenna kokonaistulos tiedostoon:
+def tallenna_tulos(pelaaja):
+    yht = sum(v for v in pelaaja.values() if v is not None)
+    
+    with open("tulokset.txt", "a") as tiedosto:
+        tiedosto.write(f"{yht} \n")
+
+
 def kirjaus(pelaaja):
     nopat = vuoro()
 
@@ -30,10 +39,15 @@ def pelaajan_vuoro():
 
 
 if __name__ == "__main__":
+    
     nayta_tulos(pelaaja)
-    kierrokset = 15
+    kierrokset = 2
     for kierros in range(1, kierrokset + 1):
         pelaajan_vuoro()
         
     print("Taulukko täytetty! lopullinen tulos:")
     nayta_tulos(pelaaja)
+    tallenna_tulos(pelaaja)
+    print("tulos tallennettu")
+    
+    # to do: näytä paras tulos, ilmoita jos uusi ennätys

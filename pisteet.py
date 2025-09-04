@@ -2,7 +2,7 @@
 ##### pisteiden tarkistus & kirjaus #####
 
 
-# pelaajatiedot vois ehkä tallentaa tiedostoon ?
+
 pelaaja = {
     "ykköset": None, "kakkoset": None, "kolmoset": None,
     "neloset": None, "vitoset": None, "kutoset": None,
@@ -10,7 +10,7 @@ pelaaja = {
     "neljä samaa": None, "pieni suora": None, "iso suora": None,
     "täyskäsi": None, "sattuma": None, "yatzy": None
 }
-
+    
 
 def nayta_tulos(pelaaja):
     i = 1
@@ -21,7 +21,7 @@ def nayta_tulos(pelaaja):
     for i, (kohta, arvo) in enumerate(pelaaja.items(), start=1):
         print (f"{i}: {kohta}: {arvo if arvo is not None else '-'}")
     print(f"Yhteensä: {yht}")
-    print("-----------------------------")
+    print("------------------------------")
     print()
 
 
