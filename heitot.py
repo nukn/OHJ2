@@ -13,7 +13,7 @@ def pidettavat_nopat(nopat):
     while True:
         valinta = input(" ").strip()
         if not valinta:
-            return nopat
+            return []
         try:
             valitut = list(map(int, valinta.split()))
             temp_nopat = list(nopat)
