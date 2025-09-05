@@ -8,7 +8,24 @@ def tallenna_tulos(pelaaja):
     
     with open("tulokset.txt", "a") as tiedosto:
         tiedosto.write(f"{yht} \n")
+        
+# Paras tulos
+kokonaistulos = tallenna_tulos(pelaaja) 
 
+def paras_tulos():
+    try:
+        with open("tulokset.txt", "r") as tiedosto:
+            tulokset = [int(rivi.strip()) for rivi in tiedosto if rivi.strip().isdigit()]
+            return max(tulokset) if tulokset else 0
+    except FileNotFoundError:
+        return 0
+    
+paras = paras_tulos()
+
+if kokonaistulos > paras:
+    print(f"Uusi ennätys!: {kokonaistulos}")
+else:
+    print(f"Saavutettu tulos: {kokonaistulos}. Paras tulos on edelleen: {paras}")
 
 def kirjaus(pelaaja):
     nopat = vuoro()
