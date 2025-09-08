@@ -9,7 +9,7 @@ def nayta_nopat(nopat):
     print("Nopat:", " ".join(str(n) for n in nopat))
 
 def pidettavat_nopat(nopat):
-    print("Nykyiset nopat:", " ".join(str(n) for n in nopat))
+    #print("Nykyiset nopat:", " ".join(str(n) for n in nopat))
     while True:
         valinta = input(" ").strip()
         if not valinta:
@@ -25,8 +25,8 @@ def pidettavat_nopat(nopat):
 
 def vuoro():
     nopat = heita(5)
-    for heitto in range(2):
-        print(f"\nHeitto: {heitto}")
+    for heitto in range(3):
+        print(f"\nHeitto: {heitto + 1}")
         nayta_nopat(nopat)
         print("Valitse pidettävät nopat:")
         valitut = pidettavat_nopat(nopat)
